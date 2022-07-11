@@ -28,7 +28,8 @@ INSTALLED_APPS = [
 
     'playlists',
     'songs',
-    'tuning'
+    'tuning',
+    'authors',
 ]
 
 DATABASES = {
