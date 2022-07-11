@@ -1,5 +1,5 @@
 from rest_framework.routers import SimpleRouter
-from views import PlaylistViewSet
+from .views import PlaylistViewSet
 
 router = SimpleRouter()
 

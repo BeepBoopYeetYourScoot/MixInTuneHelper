@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Playlist
+from .models import Playlist
 
 
 class PlaylistAdmin(admin.ModelAdmin):
