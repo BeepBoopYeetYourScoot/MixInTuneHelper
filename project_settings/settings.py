@@ -1,10 +1,14 @@
 import os
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv(verbose=True)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.join(PROJECT_ROOT, 'MixInTuneHelper'))
+
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = bool(os.getenv('DEBUG'))
@@ -63,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'MixInTuneHelper.wsgi.application'
+WSGI_APPLICATION = 'project_settings.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
