@@ -10,14 +10,7 @@ class Playlist(models.Model):
     tunes = models.ManyToManyField(Tune, related_name='playlists')
 
     name = models.CharField(max_length=200)
+    spotify_id = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.name
-
-    @property
-    def song_count(self) -> int:
-        return self.songs.all().count()
-
-    @property
-    def total_duration(self) -> dict[str: models.DurationField]:
-        return self.songs.all().aggregate(Sum('duration', output_field=models.DurationField()))
