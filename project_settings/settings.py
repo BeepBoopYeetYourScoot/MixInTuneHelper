@@ -11,6 +11,8 @@ sys.path.append(os.path.join(PROJECT_ROOT, 'MixInTuneHelper'))
 
 
 SECRET_KEY = os.getenv('SECRET_KEY')
+SPOTIPY_CLIENT_ID = os.getenv('SPOTIPY_CLIENT_ID')
+SPOTIPY_CLIENT_SECRET = os.getenv('SPOTIPY_CLIENT_SECRET')
 DEBUG = bool(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS = []
